@@ -9,5 +9,29 @@ import org.bukkit.inventory.ItemStack;
 )
 public abstract class BukkitInventory extends Inventory<BukkitInventory>
 {
-    public abstract ItemStack[] getItems();
+    public abstract String getName();
+
+    public abstract Slot[] getSlots();
+
+    public final static class Slot
+    {
+        private final int index;
+        private final ItemStack item;
+
+        public Slot(final int index, final ItemStack item)
+        {
+            this.index = index;
+            this.item = item;
+        }
+
+        public int getIndex()
+        {
+            return this.index;
+        }
+
+        public ItemStack getItem()
+        {
+            return this.item;
+        }
+    }
 }

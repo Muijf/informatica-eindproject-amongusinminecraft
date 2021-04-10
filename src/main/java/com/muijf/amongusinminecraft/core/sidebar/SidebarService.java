@@ -16,11 +16,11 @@ public final class SidebarService extends Provider<SidebarService>
 
     public final Sidebar init(final UUID uuid)
     {
-        return new Sidebar();
+        return null;
     }
 
     public final Sidebar getSidebar(final UUID uuid)
     {
-        return new Sidebar();
+        return null;
     }
 }
