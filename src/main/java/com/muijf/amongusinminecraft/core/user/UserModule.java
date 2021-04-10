@@ -16,10 +16,6 @@ import com.minecraftmultiplayer.pluggit.common.container.node.type.provider.Prov
                 @Node.Prop(
                     id = "ADAPTER",
                     classValue = ProtocolLibAdapter.class
-                ),
-                @Node.Prop(
-                    id = "NAME",
-                    stringValue = "Muijf"
                 )
             }
         )
@@ -34,7 +30,7 @@ import com.minecraftmultiplayer.pluggit.common.container.node.type.provider.Prov
         @Component.Ref(User.class)
     }
 )
-public final class UserModule extends Module
+public final class UserModule extends Module<UserModule>
 {
     public UserModule()
     {
