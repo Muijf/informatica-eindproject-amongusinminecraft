@@ -32,8 +32,5 @@ import com.minecraftmultiplayer.pluggit.common.container.node.type.provider.Prov
 )
 public final class UserModule extends Module<UserModule>
 {
-    public UserModule()
-    {
 
-    }
 }
