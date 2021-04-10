@@ -7,15 +7,15 @@ import java.util.UUID;
 
 public final class User extends Component<User>
 {
-    private Player player;
+    private Player bukkitPlayer;
 
     public final UUID getUUID()
     {
         return UUID.randomUUID();
     }
 
-    public Player getPlayer()
+    public Player getBukkitPlayer()
     {
-        return this.player;
+        return this.bukkitPlayer;
     }
 }

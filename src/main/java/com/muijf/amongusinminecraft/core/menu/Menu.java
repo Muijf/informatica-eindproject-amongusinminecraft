@@ -1,24 +1,29 @@
 package com.muijf.amongusinminecraft.core.menu;
 
+import com.minecraftmultiplayer.inventory.bukkit.BukkitInventory;
 import com.minecraftmultiplayer.pluggit.common.container.node.Node;
 import com.minecraftmultiplayer.pluggit.common.container.node.NodeService;
 import com.minecraftmultiplayer.pluggit.common.container.node.event.NodeInjectEvent;
-import com.minecraftmultiplayer.pluggit.common.container.node.type.component.Component;
-import org.bukkit.entity.Player;
+import com.muijf.amongusinminecraft.core.user.User;
 
 @Node.Config(
     version = "1.0"
 )
-public class Menu extends Component<Menu>
+public abstract class Menu extends BukkitInventory
 {
-    private final Player player;
+    private final User user;
 
     @Inject private MenuService menuService;
     @Inject private NodeService nodeService;
 
-    public Menu(final Player player)
+    public Menu(final User user)
     {
-        this.player = player;
+        this.user = user;
+    }
+
+    public final User getUser()
+    {
+        return this.user;
     }
 
     @On(NodeInjectEvent.class)

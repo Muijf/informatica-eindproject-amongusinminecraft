@@ -9,6 +9,9 @@ import java.util.IdentityHashMap;
 import java.util.Map;
 import java.util.UUID;
 
+@Provider.Config(
+    providedIn = UserModule.class
+)
 public final class UserService extends Provider<UserService>
 {
     private final Map<UUID, User> userMap = new IdentityHashMap<>();

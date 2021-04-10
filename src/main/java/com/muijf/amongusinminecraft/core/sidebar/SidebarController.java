@@ -18,11 +18,12 @@ public final class SidebarController extends Controller<SidebarController>
     @OnCommand("/sidebar toggle")
     public void toggleSidebar(@Inject final Player player)
     {
-        final UUID uuid = player.getUniqueId();
+        final UUID uniqueId = player.getUniqueId();
 
-        if(this.sidebarService.hasSidebar(uuid))
+        if(this.sidebarService.hasSidebar(uniqueId))
         {
-            this.sidebarService.getSidebar(uuid).toggle();
+            this.sidebarService.getSidebar(uniqueId)
+                .toggle();
         }
     }
 
@@ -50,7 +51,8 @@ public final class SidebarController extends Controller<SidebarController>
 
         if(this.sidebarService.hasSidebar(uuid))
         {
-            this.sidebarService.getSidebar(uuid).unload();
+            this.sidebarService.getSidebar(uuid)
+                .unload();
         }
     }
 }

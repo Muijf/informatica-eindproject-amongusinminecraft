@@ -4,6 +4,9 @@ import com.minecraftmultiplayer.pluggit.common.container.node.type.provider.Prov
 
 import java.util.UUID;
 
+@Provider.Config(
+    providedIn = SidebarModule.class
+)
 public final class SidebarService extends Provider<SidebarService>
 {
     public final boolean hasSidebar(final UUID uuid)
