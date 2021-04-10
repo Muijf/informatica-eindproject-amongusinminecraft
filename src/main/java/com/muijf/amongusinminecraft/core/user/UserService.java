@@ -53,7 +53,7 @@ public final class UserService extends Provider<UserService>
         {
             throw new UserNotFoundException(String.format("Could not find the user with uuid '%s'", uuid.toString()));
         }
-        return new User();
+        return this.userMap.get(uuid);
     }
 
     /**
